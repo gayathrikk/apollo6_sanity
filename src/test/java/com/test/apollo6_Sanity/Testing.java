@@ -156,6 +156,26 @@ public class Testing {
 	 		    System.out.println("Human-44 not clicked: " + e.getMessage());
 	 		}
 	    	 checkConsoleLog();
+	    	 
+	    	 
+	    	 String parentWindow = driver.getWindowHandle();
+	    	 try {
+		 		    WebElement viewericon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//nb-icon[@nbtooltip='Viewer']")));
+		 		   viewericon.click();
+		 		    System.out.println("viewer icon is clicked successfully.");
+		 		    Thread.sleep(2000);
+		 		} catch (Exception e) {
+		 		    System.out.println(" viewer icon is not clicked: " + e.getMessage());
+		 		}
+	    	 
+	    	 wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+			  Set<String> allWindows = driver.getWindowHandles();
+		        for (String window : allWindows) {
+		            if (!window.equals(parentWindow)) {
+		                driver.switchTo().window(window);
+		                break;
+		            }
+		        }
 	    	
 	    	 System.out.println("************************************Series set validation done********************************");
 	
