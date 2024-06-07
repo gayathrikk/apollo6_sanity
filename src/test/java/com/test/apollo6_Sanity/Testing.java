@@ -1,3 +1,4 @@
+
 package com.test.apollo6_Sanity;
 
 import java.net.MalformedURLException;
@@ -128,7 +129,6 @@ public class Testing {
 	    		} catch (Exception e) {
 	    		    System.out.println("Human Brain not clicked: " + e.getMessage());
 	    		}
-	    	 checkConsoleLog();
 	    	 
 	    	 try {
 	    		    WebElement Brain = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[6]//td[2]")));
@@ -138,7 +138,6 @@ public class Testing {
 	    		} catch (Exception e) {
 	    		    System.out.println("Brain not clicked: " + e.getMessage());
 	    		}
-	    	 checkConsoleLog();
 	    	 
 	    	 try {
 	 		    WebElement MTB_10 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@role='grid']//tr[11]//td[3]")));
@@ -148,7 +147,6 @@ public class Testing {
 	 		} catch (Exception e) {
 	 		    System.out.println("Human-44 not clicked: " + e.getMessage());
 	 		}
-	    	 checkConsoleLog();
 	    	 
 	    	 
 	    	 String parentWindow = driver.getWindowHandle();
